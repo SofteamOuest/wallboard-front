@@ -1,6 +1,7 @@
 = Wallboard Front
 
 The wallboard front-end :
+
 * Widgets
 * Conductor/Orchestration scripts
 * Admin app
@@ -11,6 +12,7 @@ The wallboard front-end :
 
 == Requirements
 * Docker
+* Wallboard API running at http://localhost:5000
 
 == Run with Docker 
 [source]
