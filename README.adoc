@@ -6,19 +6,23 @@ The wallboard front-end :
 * Admin app
 
 == Structure
-* Widgets are served from `widgets` directory
-* The `conductor` script allows to cycle between the widgets; the widgets have to be registered via the API 
+* Widgets are stored in `widgets` directory
+* The `conductor` script allows to cycle between the widgets
+** The widgets have to be registered via the API 
+** The widgets must manually import the `conductor` script
 
 == Requirements
 * Docker
 
-== Run with Docker 
+== Run devServer locally using docker + webpack
+
 [source]
 ----
-docker run --name wallboard-front -p 8000:80 -v ${PWD}:/usr/share/nginx/html:ro -d nginx
+docker run --name wallboard-front -p 8080:8080 -v ${PWD}:/app -w /app -it node bash
+npm run start
 ----
 
-This will serve the front-end at http://localhost:8000/index.html
+This will serve the front-end at http://localhost:8080/index.html
 
 To stop:
 
@@ -32,4 +36,10 @@ To restart:
 [source]
 ----
 docker start wallboard-front
+docker attach wallboard-front
+npm run start
 ----
+
+== Build with docker
+
+TODO
