@@ -4,8 +4,8 @@
   "description": "= Wallboard Front",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack-dev-server"
+    "build": "npx webpack",
+    "dev": "npx webpack-dev-server"
   },
   "repository": {
     "type": "git",

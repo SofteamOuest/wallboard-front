@@ -4,7 +4,7 @@ The wallboard front-end :
 
 * Widgets
 * Conductor/Orchestration scripts
-* Admin app
+* and a future admin app 
 
 == Structure
 * Widgets are stored in `widgets` directory
@@ -13,15 +13,23 @@ The wallboard front-end :
 ** The widgets must manually import the `conductor` script
 
 == Requirements
-* Docker
-* Wallboard API running at http://localhost:5000
+* Docker or NodeJS
+* https://github.com/SofteamOuest/wallboard-back[Wallboard API] running at http://localhost:5000
 
-== Run devServer locally using docker + webpack
+== Run devServer locally with NodeJS + webpack
+[source]
+----
+npm run dev
+----
+
+This will serve the front-end at http://localhost:8080/index.html
+
+== Run devServer locally with Docker + webpack
 
 [source]
 ----
 docker run --name wallboard-front -p 8080:8080 -v ${PWD}:/app -w /app -it node bash
-npm run start
+npm run dev
 ----
 
 This will serve the front-end at http://localhost:8080/index.html
@@ -39,7 +47,7 @@ To restart:
 ----
 docker start wallboard-front
 docker attach wallboard-front
-npm run start
+npm run dev
 ----
 
 == Build with docker
