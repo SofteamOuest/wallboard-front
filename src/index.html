@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>The Wallboard</title>
+</head>
+<body>
+<main>
+    Loading
+    <div class="dot dot1"></div>
+    <div class="dot dot2"></div>
+    <div class="dot dot3"></div>
+</main>
+<style>
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: linear-gradient(135deg, #FCCF31 10%, #F55555 100%);
+    display: grid;
+    font: bold 3rem Helvetica;
+    color: #fff;
+}
+main {
+    justify-self: center;
+    align-self: center;
+}
+.dot
+{
+    width: .6rem;
+    height: .6rem;
+    border-radius: 50%;
+    display: inline-block;
+    background: #fff;
+}
+.dot1 { animation: dot-jump 1s ease infinite; }
+.dot2 { animation: dot-jump 1s .1s ease infinite; }
+.dot3 { animation: dot-jump 1s .2s ease infinite; }
+@keyframes dot-jump
+{
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-15px); } 
+    66% { transform: translateY(0); }
+}
+</style>
+</body>
+</html>

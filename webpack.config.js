@@ -18,7 +18,7 @@ module.exports = {
             { from: 'src/widgets' }
         ]),
         new HtmlWebpackPlugin({
-            title: 'Wallboard'
+            template: 'src/index.html'
         })
     ],
     output: {

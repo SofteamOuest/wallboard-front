@@ -1,3 +1,5 @@
+import CountDown from './CountDown'
+
 const TIMEOUT = 10 * 1000;
 
 export default class Wallboard {
@@ -7,6 +9,7 @@ export default class Wallboard {
     }
 
     show(url) {
+        new CountDown(this.window, this.timeout / 1000).show();
         setTimeout(() => this.window.location.assign(url), this.timeout);
     }
 }

@@ -9,6 +9,6 @@ export default class WidgetListService {
                 .then(response => response.json())
                 .then(response =>
                     resolve(new WidgetList(response.map(el => el.uri))))
-                .catch(reason => reject(reason)));
+                .catch(reason => reject(`Could not fetch widget list: ${reason}`)));
     }
 }

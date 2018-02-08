@@ -5,6 +5,9 @@ export default class WidgetList {
     }
 
     findCurrentIndex(url) {
+        if (!this.contentList.length)
+            console.warn("Widget list empty. Is the backend correctly setup ?");
+            
         this.currentIndex =
             Math.max(0,
                 this.contentList.findIndex(el => url.indexOf(el) != -1));
