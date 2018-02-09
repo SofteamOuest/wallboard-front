@@ -50,10 +50,15 @@ docker attach wallboard-front
 npm run dev
 ----
 
-== Build with docker
+== Build 
+
+Uses a Nginx server to serve the front-end.
+
+Example of build with NodeJS and Docker.
 
 [source]
 ----
+npm run build
 docker build -t wallboard-front .
 
 # and then run image :
