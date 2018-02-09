@@ -52,4 +52,12 @@ npm run dev
 
 == Build with docker
 
-TODO
+[source]
+----
+docker build -t wallboard-front .
+
+# and then run image :
+docker run -d -p 8080:80 wallboard-front
+----
+
+This will serve the front-end at http://localhost:8080/index.html
