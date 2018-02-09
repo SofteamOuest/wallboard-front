@@ -9,7 +9,7 @@ export default class Wallboard {
     }
 
     show(url) {
-        new CountDown(this.window, this.timeout / 1000).show();
+        new CountDown(this.window, this.timeout).show();
         setTimeout(() => this.window.location.assign(url), this.timeout);
     }
 }

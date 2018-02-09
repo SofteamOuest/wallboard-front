@@ -1,9 +1,14 @@
+const TIMEOUT = 200;
+
 export default class CountDown
 {
-    constructor(wndw, index) {
-        this.index = 5 * index;
-        this.total = 5 * index;
+    constructor(wndw, duration) {
         this.window = wndw;
+
+        let initialWidth = 100;        
+        this.width = initialWidth;
+        this.timeout = TIMEOUT;
+        this.increment = this.timeout * initialWidth / duration;
     }
 
     show() {
@@ -24,10 +29,10 @@ export default class CountDown
 
     decreaseAndShow() {
         // TODO use css animations instead
-        if (this.index > 0) {
-            this.div.style.width = (this.index / this.total * 100) + '%';
-            --this.index;
-            setTimeout(() => this.decreaseAndShow(), 200);
+        if (this.width > 0) {
+            this.div.style.width = Math.floor(this.width) + '%';
+            this.width -= this.increment;
+            setTimeout(() => this.decreaseAndShow(), this.timeout);
         }
     }
 }
