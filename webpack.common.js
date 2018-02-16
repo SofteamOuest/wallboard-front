@@ -7,11 +7,6 @@ module.exports = {
     entry: {
         conductor: './src/conductor/index.js'
     },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: './dist',
-        host: '0.0.0.0'
-    },
     plugins: [
         new CleanWebpackPlugin('dist'),
         new CopyWebpackPlugin([
