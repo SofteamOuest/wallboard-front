@@ -1,6 +1,6 @@
 import WidgetList from './WidgetList';
 
-const WIDGET_API = 'http://localhost:5000/api/widgets';
+const WIDGET_API = process.env.WIDGET_API;
 
 export default class WidgetListService {
     getList() {
