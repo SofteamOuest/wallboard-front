@@ -1,7 +1,7 @@
 import WidgetListService from './WidgetListService'
 import Wallboard from './Wallboard'
 
-export default class WidgetController {
+export default class WallboardController {
     constructor(wndw) {
         this.window = wndw;
     }
