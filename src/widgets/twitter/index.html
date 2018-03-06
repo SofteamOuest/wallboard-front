@@ -6,9 +6,29 @@
 	<title>Tweets by SofteamGroup</title>
 </head>
 <body>
-	<a class="twitter-timeline" data-width="600" href="https://twitter.com/SofteamGroup?ref_src=twsrc%5Etfw">Tweets by SofteamGroup</a>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+	<main>
+		<a class="twitter-timeline" data-width="600" href="https://twitter.com/SofteamGroup?ref_src=twsrc%5Etfw">Tweets by SofteamGroup</a>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
-	<script src="/conductor.bundle.js"></script>
+		<script src="/conductor.bundle.js"></script>
+	</main>
+	<style type="text/css">
+		html {
+			height: 100%;
+		}
+		body {
+			display: grid;
+			grid-template-columns: 1fr 640px 1fr;
+			margin: 0;
+			background-image: linear-gradient( 180deg, #3C8CE7 10%, #00EAFF 100%);
+			background-attachment: fixed;
+			height: 100%;
+			color: #3C8CE7;
+		}
+		main {
+			grid-column: 2;
+			background-color: white;
+		}
+	</style>
 </body>
 </html>

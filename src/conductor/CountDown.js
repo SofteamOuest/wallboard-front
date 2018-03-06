@@ -18,7 +18,7 @@ export default class CountDown
 
     initDisplay() {
         this.div = this.window.document.createElement('div');
-        this.div.style.position = 'absolute';
+        this.div.style.position = 'fixed';
         this.div.style.right = '0';
         this.div.style.bottom = '0';
         this.div.style.backgroundColor = 'currentColor';

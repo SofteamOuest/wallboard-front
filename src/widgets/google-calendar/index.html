@@ -6,7 +6,27 @@
 	<title>Startech Ouest Calendar</title>
 </head>
 <body>
-	<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=480&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=startech.ouest%40gmail.com&amp;color=%23333333&amp;ctz=Europe%2FParis" style="border-width:0" width="640" height="480" frameborder="0" scrolling="no"></iframe>
-	<script src="/conductor.bundle.js"></script>
+	<main>
+		<iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=480&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=startech.ouest%40gmail.com&amp;color=%23333333&amp;ctz=Europe%2FParis" style="border-width:0" width="640" height="480" frameborder="0" scrolling="no"></iframe>
+		<script src="/conductor.bundle.js"></script>
+	</main>
+	<style type="text/css">
+	html {
+		height: 100%;
+	}
+	body {
+		display: grid;
+		grid-template-columns: 1fr 640px 1fr;
+		margin: 0;
+		background-image: linear-gradient( 135deg, #ABDCFF 10%, #0396FF 100%);
+		background-attachment: fixed;
+		height: 100%;
+		color: #ABDCFF;
+	}
+	main {
+		grid-column: 2;
+		background-color: white;
+	}
+	</style>
 </body>
 </html>
