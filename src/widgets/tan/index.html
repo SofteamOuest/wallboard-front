@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Horaires TAN &#150; &Icirc;le de Nantes</title>
+</head>
+<body>
+    <main id="app">
+        <schedule-item 
+            v-for="schedule in schedules"
+                :schedule="schedule"
+                :key="schedule.id">
+          </schedule-item>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script>
+    Vue.component('schedule-item', {
+        props: ['schedule'],
+        template:
+            `<section>
+                <h2>{{schedule.stop}}</h2>
+                <h3>{{schedule.direction}}</h3>
+            </section>`
+    });
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            schedules: Array(4).fill(0).map((_, i) => {
+                    return {
+                            id: i,
+                            stop: `Arret ${i}`,
+                            direction: `Direction ${i}`,
+                        }})
+        }
+    })
+    </script>
+    <style type="text/css">
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            background: #31aa4e;
+            color: #ffffff;
+            font-family: 'Helvetica'
+        }
+        /*
+        https://coolors.co/31aa4e-ffbf00-e83f6f-2274a5-ffffff
+
+        Horaires estimés
+        http://open.tan.fr/ewp/horairesarret.json/IDNA/4/1
+        http://open.tan.fr/ewp/horairesarret.json/IDNA/4/2
+        http://open.tan.fr/ewp/horairesarret.json/IDNA/C5/1
+        http://open.tan.fr/ewp/horairesarret.json/IDNA/C5/2
+
+        Temps d'attente
+        http://open_preprod.tan.fr/ewp/tempsattente.json/IDNA
+        */
+        </style>
+</body>
+</html>
