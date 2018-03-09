@@ -1,0 +1,60 @@
+/* https://coolors.co/31aa4e-ffbf00-e83f6f-2274a5-ffffff */
+:root {
+    --background: #31aa4e;
+    --foreground: #ffffff;
+    --accent-1: #ffbf00 ;
+    --accent-2: #e83f6f ;
+    --accent-3: #2274a5 ;
+    --shadow: #247c39;
+    --space-1x: 1rem;
+    --space-2x: 2rem;
+}
+* {
+    margin: 0;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'Helvetica';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: var(--space-2x);
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+}
+section {
+    background: var(--foreground);
+    color: var(--background);
+    box-shadow: 0 3px 3px var(--shadow);
+}
+header {
+    background: var(--accent-3);
+    color: var(--foreground);
+    padding: var(--space-1x);
+    display: flex;
+    align-items: center;
+}
+h3:before {
+    content: ' \2BC8 '
+}
+p {
+    padding: var(--space-2x) var(--space-1x);
+}
+    .soon p {
+        border-bottom: solid 5px var(--accent-1);
+        color: var(--accent-1);
+        font-size: larger;
+    }
+    .soon.imminent p {
+        border-bottom-color: var(--accent-2);
+        color: var(--accent-2);
+    }
