@@ -8,46 +8,29 @@
 <body>
     <main id="app">
         <schedule-item 
-            v-for="schedule in schedules"
-                :schedule="schedule"
-                :key="schedule.id">
+            v-for="busLine in busLines"
+                :bus-line="busLine"
+                :key="busLine.id">
           </schedule-item>
         </section>
     </main>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
-    <script>
-    Vue.component('schedule-item', {
-        props: ['schedule'],
-        template:
-            `<section :class="classObject">
-                <header>
-                    <h2>{{schedule.line}}</h2>
-                    <h3>{{schedule.direction}}</h3>
-                </header>
-                <p>{{schedule.next}} min</p>
-            </section>`,
-        computed: {
-            classObject: function () {
-                return {
-                    soon: this.schedule.next <= 3,
-                    imminent: this.schedule.next <= 1
-                }
-            }
-        }
-    });
 
-    var app = new Vue({
-        el: '#app',
-        data: {
-            schedules: Array(4).fill(0).map((_, i) => {
-                    return {
-                            id: i,
-                            line: `Ligne ${i}`,
-                            direction: `Direction ${i}`,
-                            next: Math.floor(Math.random() * (10 - 1)) + 1
-                        }})
-        }
-    })
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+    <script type="module">
+        import ScheduleItem from './js/schedule-item.js'
+        import BusLine from './js/bus-line.js'
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                busLines: 
+                    [
+                        ["4", 1], ["4", 2],
+                        ["C5", 1], ["C5", 2]
+                    ]  
+                    .map(lineAndDirection => new BusLine(...lineAndDirection))
+            }
+        })
     </script>
         <!--
         Horaires estimés

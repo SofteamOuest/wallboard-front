@@ -8,6 +8,8 @@
     --shadow: #247c39;
     --space-1x: 1rem;
     --space-2x: 2rem;
+    --space-4x: 4rem;
+    --space-8x: 8rem;
 }
 * {
     margin: 0;
@@ -27,7 +29,7 @@ body {
 main {
     margin: 0 auto;
     display: grid;
-    grid-gap: var(--space-2x);
+    grid-gap: var(--space-4x) var(--space-2x) ;
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
 }
@@ -35,6 +37,7 @@ section {
     background: var(--foreground);
     color: var(--background);
     box-shadow: 0 3px 3px var(--shadow);
+    min-width: var(--space-8x);
 }
 header {
     background: var(--accent-3);
