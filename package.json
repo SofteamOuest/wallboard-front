@@ -20,7 +20,7 @@
   "homepage": "https://github.com/SofteamOuest/wallboard-front#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.17",
-    "copy-webpack-plugin": "^4.3.1",
+    "copy-webpack-plugin": "^4.5.1",
     "dotenv-webpack": "^1.5.4",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.10.0",
