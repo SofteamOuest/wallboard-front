@@ -4,5 +4,12 @@ export default class BusLine
         this.id = line + direction
         this.line = line
         this.direction = direction
+        this.terminus = '...'
+        this.next = -1
+    }
+
+    sameAs(other) {
+        return this.line == other.line
+            && this.direction == other.direction
     }
 }
