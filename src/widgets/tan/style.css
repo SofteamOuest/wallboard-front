@@ -86,14 +86,15 @@ section {
         grid-row: top-part-start/top-part-end;
         grid-column: left-part-start/left-part-end; 
         z-index: 0;
-        color: var(--background)
+        color: var(--background);
+        background: no-repeat center/cover url('img/left.png');
     }
     main::after {
         content: 'R';
         grid-row: top-part-start/top-part-end;
         grid-column: right-part-start/right-part-end; 
         z-index: 0;
-        background-color: var(--foreground)
+        background: no-repeat bottom url('img/right.png') var(--foreground);
     }
 header {
     background: var(--accent-3);
