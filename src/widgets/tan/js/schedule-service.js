@@ -9,7 +9,7 @@ function getSchedule(busLines) {
 
 const STOP = 'IDNA'
 const API = 'http://localhost:5000'
-// const API = '/tan/horairesarret.json#'
+// const API = '/tan/theoretical.json#'
 
 function getTheoreticalScheduleEndpoint(busLines) {
     let lines = new Set(busLines.map(b => `line=${b.line}`))
