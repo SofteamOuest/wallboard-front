@@ -12,4 +12,9 @@ export default class BusLine
         return this.line == other.line
             && this.direction == other.direction
     }
+
+    updateWith(schedule) {
+        this.terminus = schedule.terminus
+        this.next = schedule.next
+    }
 }

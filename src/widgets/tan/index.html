@@ -37,10 +37,7 @@
                     .then(schedules => schedules.forEach(
                                         s => this.busLines
                                             .filter(b => b.sameAs(s))
-                                            .forEach(b => {
-                                                b.terminus = s.terminus
-                                                b.next = s.next
-                                            })))
+                                            .forEach(b => b.updateWith(s))))
             }
         })
     </script>
